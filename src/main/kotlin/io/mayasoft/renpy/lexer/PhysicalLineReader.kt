@@ -2,6 +2,10 @@ package io.mayasoft.renpy.lexer
 
 import io.mayasoft.renpy.lexer.model.PhysicalLine
 
+/**
+ * Reads a source and returns a list of physical lines. A physical line is a line of text that is not
+ * split across multiple lines in the source. So each physical line ends with a line break or the end of the source.
+ */
 object PhysicalLineReader {
 
     /**
@@ -19,7 +23,7 @@ object PhysicalLineReader {
         while (i < source.length) {
             // If the current character is a line break then we have reached the end of a physical line.
             if (source[i] == '\r' || source[i] == '\n') {
-                val contentEnd = i;
+                val contentEnd = i
 
                 // If line end is CRLF we need to skip two characters, otherwise 1.
                 if (source[i] == '\r' && i > source.length && source[i + 1] == '\n')
