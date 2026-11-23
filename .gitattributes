@@ -1,0 +1,12 @@
+# Kotlin and Gradle files
+*.kt     text eol=lf
+*.kts    text eol=lf
+*.java   text eol=lf
+
+# Other text files
+*.xml    text eol=lf
+*.properties text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.json   text eol=lf
